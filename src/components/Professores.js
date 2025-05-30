@@ -1,23 +1,31 @@
+// src/components/Professores.js
 import React from 'react';
-import hervens from '../assets/hervens.jpg';
-import legba from '../assets/legba.jpg';
+import './Professores.css';
+import hervensImage from '../assets/images/hervens.jpg';
+import legbaImage from '../assets/images/legba.jpg';
 
-export default function Professores() {
+const Professores = () => {
   return (
-    <section>
-      <h2>Nossos Professores</h2>
-      <div style={{ display: 'flex', gap: '40px', justifyContent: 'center' }}>
-        <div>
-          <img src={hervens} alt="Tradutor Hervens" width="150" style={{ borderRadius: '50%' }} />
-          <p>Tradutor Hervens</p>
-        </div>
-        <div>
-          <img src={legba} alt="Professor Legba" width="150" style={{ borderRadius: '50%' }} />
-          <p>Prof. Legba</p>
+    <section className="professores">
+      <div className="container">
+        <h2>Nossos Professores</h2>
+        <div className="professores-cards">
+          <div className="professor-card">
+            <img src={hervensImage} alt="Tradutor Hervens" />
+            <h3>Tradutor Hervens</h3>
+            <p>Especialista em tradução e interpretação multilíngue. Atua com paixão no ensino de idiomas para migrantes.</p>
+          </div>
+          <div className="professor-card">
+            <img src={legbaImage} alt="Prof. Legba" />
+            <h3>Prof. Legba</h3>
+            <p>Professor de línguas com vasta experiência em contextos interculturais. Defensor do ensino acessível e inclusivo.</p>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Professores;
 // src/components/Professores.js
-// Este componente exibe informações sobre os professores da empresa Chavidiomas, incluindo imagens e nomes.
+// import React from 'react';

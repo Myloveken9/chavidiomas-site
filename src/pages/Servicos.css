@@ -1,0 +1,51 @@
+.servicos {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.servico {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.servico h3 {
+  color: #333;
+}
+
+.servico p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.botao.frances {
+  background-image: url('/src/assets/images/france.png'); /* remplace par le bon chemin */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border: none;
+}
+
+.botao.crioulo {
+  background-image: url('/src/assets/images/haiti.png'); /* remplace par le bon chemin */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border: none;
+}
+
+.botao.padrao {
+  background-color: #2a7ae4;
+}

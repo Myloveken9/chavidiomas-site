@@ -1,0 +1,90 @@
+/* src/pages/Home.css */
+.home-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.slogan {
+  background-color: #f0f0f0;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.quem-somos {
+  margin-top: 40px;
+}
+
+.quem-somos h2 {
+  color: #004080;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.quem-somos p {
+  margin-bottom: 15px;
+}
+
+.quem-somos ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.quem-somos ul li {
+  margin-bottom: 10px;
+}
+.servicos {
+  margin-top: 60px;
+}
+
+.servicos h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #004080;
+}
+
+.servico {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.servico h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.servico p {
+  margin-bottom: 10px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #007BFF;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.botao.frances {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Francophonie_flag.svg/1280px-Francophonie_flag.svg.png');
+  background-size: cover;
+  color: black;
+}
+
+.botao.crioulo {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg');
+  background-size: cover;
+  color: black;
+}
+
+.botao.padrao {
+  background-color: #007BFF;
+}

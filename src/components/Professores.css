@@ -1,0 +1,44 @@
+.professores {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.professores h2 {
+  font-size: 2rem;
+  color: #1e90ff;
+  margin-bottom: 40px;
+}
+
+.professores-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.professor-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.professor-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.professor-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.professor-card p {
+  font-size: 1rem;
+  color: #555;
+}

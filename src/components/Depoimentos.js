@@ -1,18 +1,31 @@
+// src/components/Depoimentos.js
 import React from 'react';
+import './Depoimentos.css';
 
-export default function Depoimentos() {
+const Depoimentos = () => {
   return (
-    <section>
-      <h2>Depoimentos</h2>
-      <ul>
-        <li>“Muito bom professor, ótima didática...” (Guilherme, Osasco, 2022)</li>
-        <li>“Excelente professor, excelente explicação...” (Maria Eduarda, São Paulo, 2022)</li>
-        <li>“Gostei do método de ensino e da didática...” (Esmeraldo, São Paulo, 2019)</li>
-        <li>“Profissional competente, ótima metodologia...” (Ana Paula, São Bernardo, 2018)</li>
-        <li>“Muito bom. Ajusta a aula à necessidade...” (João Alfredo, Alphaville, 2018)</li>
-      </ul>
+    <section className="depoimentos">
+      <div className="container">
+        <h2>Depoimentos</h2>
+        <div className="depoimentos-lista">
+          <div className="depoimento">
+            <p>"Os cursos da Chavidiomas me ajudaram a aprender francês rapidamente. Os professores são excelentes!"</p>
+            <h4>– Maria Silva</h4>
+          </div>
+          <div className="depoimento">
+            <p>"Graças à equipe da Chavidiomas, hoje consigo me comunicar com facilidade em português e francês."</p>
+            <h4>– Jean Paul</h4>
+          </div>
+          <div className="depoimento">
+            <p>"Ótimos serviços de tradução e legendagem. Recomendo totalmente!"</p>
+            <h4>– Ana Oliveira</h4>
+          </div>
+        </div>
+      </div>
     </section>
   );
-}
+};
+
+export default Depoimentos;
 // src/components/Depoimentos.js
-// Este componente exibe uma lista de depoimentos de alunos sobre os professores da empresa Chavidiomas.
+// import React from 'react';

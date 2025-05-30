@@ -1,0 +1,30 @@
+/* src/pages/AnbaMapu.css */
+
+.anba-mapu {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.anba-mapu h2 {
+  margin-bottom: 20px;
+  color: #2a7ae4;
+}
+
+.anba-mapu p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.botao.padrao {
+  background-color: #2a7ae4;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.botao.padrao:hover {
+  background-color: #1a5bb8;
+}

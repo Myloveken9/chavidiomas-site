@@ -1,38 +1,51 @@
+// src/App.js
 import React from 'react';
-import './App.css';
-import logo from './assets/logo.jpg';
-import QuemSomos from './components/QuemSomos';
-import Servicos from './components/Servicos';
-import Professores from './components/Professores';
-import AnbaMapu from './components/AnbaMapu';
-import Depoimentos from './components/Depoimentos';
-import Contato from './components/Contato';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Servicos from './pages/Servicos';
+import Projetos from './pages/Projetos';
+import Depoimentos from './pages/Depoimentos';
+import Contato from './pages/Contato';
+
+
+
+
+// import Servicos from '../components/Servicos';
+// import Depoimentos from '../components/Depoimentos';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <img src={logo} alt="Chavidiomas logo" width="180" />
-        <h1>Chavidiomas</h1>
-        <p>8 anos de dedicação e foco transformando barreiras linguísticas em chaves e oportunidades.</p>
-      </header>
-
-      <QuemSomos />
-      <Servicos />
-      <Professores />
-      <AnbaMapu />
-      <Depoimentos />
-      <Contato />
-
-      <footer>
-        <p>© 2025 Chavidiomas - Todos os direitos reservados.</p>
-      </footer>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/servicos" element={<Servicos />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/servicos" element={<Servicos />} />
+        <Route path="/projetos" element={<Projetos />} />
+        <Route path="/depoimentos" element={<Depoimentos />} />
+        <Route path="/contato" element={<Contato />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App;
+export default App;<Routes>
+  <Route path="/" element={<Home />} />
+  {/* <Route path="/servicos" element={<Servicos />} />
+  <Route path="/projetos" element={<Projetos />} />
+  <Route path="/depoimentos" element={<Depoimentos />} />
+  <Route path="/contato" element={<Contato />} /> */}
+</Routes>
+
 // src/App.js
-// Este é o componente principal da aplicação Chavidiomas, que importa e organiza os componentes de Quem Somos, Serviços, Professores, Anba Mapu, Depoimentos e Contato.
-// Ele também inclui o cabeçalho com o logo e informações da empresa, além do rodapé com direitos reservados.
-// O estilo é aplicado através do arquivo App.css, e as imagens são importadas de uma pasta de assets.
+// Este é o ponto de entrada da aplicação React. Ele configura o roteamento e renderiza os componentes principais da aplicação.
+// O componente Navbar é importado e renderizado no topo, seguido pelas rotas definidas para cada página da aplicação.
+// As páginas Home, Servicos, Projetos, Depoimentos e Contato são importadas e associadas às suas respectivas rotas.
+// O componente Router do React Router é usado para gerenciar a navegação entre as diferentes páginas da aplicação.
+// O componente Routes define as rotas da aplicação, onde cada Route especifica um caminho e o componente a ser renderizado quando esse caminho é acessado.
+// O componente App é exportado como o componente principal da aplicação, que será renderizado no arquivo index.js.
+// src/App.js
