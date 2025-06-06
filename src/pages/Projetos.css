@@ -1,45 +1,80 @@
+/* src/pages/Projetos.css */
+
 .projetos {
-  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
   background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
 }
 
 .projetos-header {
   text-align: center;
-  margin-bottom: 40px;
+  padding: 40px 20px 30px;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .projetos-header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
   color: #2c3e50;
+  font-weight: 700;
 }
 
 .projetos-header p {
   font-size: 1.2rem;
-  color: #666;
+  color: #555;
+  font-weight: 400;
 }
 
 .projetos-lista {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 30px 20px 40px;
 }
 
 .projeto-item {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.projeto-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
 }
 
 .projeto-item h2 {
-  font-size: 1.4rem;
-  color: #34495e;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #1a5276;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .projeto-item p {
-  color: #555;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .projetos {
+    margin: 20px 10px;
+  }
+
+  .projetos-header h1 {
+    font-size: 2rem;
+  }
+
+  .projetos-header p {
+    font-size: 1rem;
+  }
 }

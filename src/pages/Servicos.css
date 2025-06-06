@@ -1,51 +1,167 @@
+/* Servicos.css */
+
 .servicos {
-  padding: 40px;
-  background-color: #f9f9f9;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+.servicos h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #004d40; /* Vert foncé professionnel */
+  border-bottom: 3px solid #00796b;
+  padding-bottom: 10px;
 }
 
 .servico {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  padding: 25px 30px;
   margin-bottom: 40px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.servico:hover {
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+.servico h2 {
+  font-size: 1.8rem;
+  color: #00796b;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .servico h3 {
-  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #004d40;
+  margin-bottom: 18px;
 }
 
 .servico p {
-  margin: 15px 0;
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
 }
 
-.botao {
+.servico ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.servico ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  list-style-type: disc;
+}
+
+.servico i h2,
+.servico i h3 {
+  font-style: italic;
+  color: #00695c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.servico a.botao {
   display: inline-block;
-  padding: 10px 20px;
-  color: white;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 10px;
+  border-radius: 40px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 10px rgb(0 121 107 / 0.3);
+  color: #fff;
+  margin-top: 15px;
 }
 
 .botao.frances {
-  background-image: url('/src/assets/images/france.png'); /* remplace par le bon chemin */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  border: none;
+  background-color: #00897b;
+}
+
+.botao.frances:hover {
+  background-color: #00695c;
+  box-shadow: 0 6px 15px rgb(0 105 92 / 0.5);
 }
 
 .botao.crioulo {
-  background-image: url('/src/assets/images/haiti.png'); /* remplace par le bon chemin */
-  background-size: cover;
-  background-position: center;
+  background-color: #f9a825; /* Jaune doré */
   color: #fff;
-  border: none;
 }
 
-.botao.padrao {
-  background-color: #2a7ae4;
+.botao.crioulo:hover {
+  background-color: #f57f17;
+  box-shadow: 0 6px 15px rgb(245 127 23 / 0.5);
+}
+
+/* Styles pour liens simples "Solicitar orçamento" */
+.servico a {
+  color: #00796b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.servico a:hover {
+  color: #004d40;
+  text-decoration: none;
+}
+
+/* Supprime le style par défaut des listes dans la section tradução */
+.servico ul li[style] {
+  list-style: none;
+  font-weight: 700;
+  color: #00796b;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.servico ul li[style] + p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicos {
+    padding: 0 15px;
+  }
+
+  .servico {
+    padding: 20px;
+  }
+
+  .servico h2 {
+    font-size: 1.5rem;
+  }
+
+  .servico h3 {
+    font-size: 1.1rem;
+  }
+
+  .servico p,
+  .servico ul li {
+    font-size: 0.95rem;
+  }
+
+  .servico a.botao {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }

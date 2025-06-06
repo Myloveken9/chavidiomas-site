@@ -1,59 +1,101 @@
-/* Contact.css */
+/* src/pages/Contato.css */
+
 .form_wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #34495e;
 }
+
 form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-input {
-  width: 30vw;
-  min-width: 12rem;
-  height: 50px;
-  margin: 10px auto;
-  padding: 20px;
-  border: none;
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow: inset 9px 9px 19px #d9d9d9, inset -9px -9px 19px
-              #ffffff;
-}
+
 label {
-  align-self: flex-start;
-  margin-top: 1rem;
-}
-*:focus {
-  outline: none;
-  box-shadow: 0 5px 10px rgba(170, 0, 255, 0.2);
-}
-button {
-  width: 8rem;
-  margin-top: 2rem;
-  padding: 10px;
+  font-weight: 600;
   font-size: 1rem;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  border-radius: 7px;
-  background: linear-gradient(145deg, #e0fff9, #bce6d2);
-  box-shadow: 9px 9px 19px #b2d9c6, -9px -9px 19px #f0ffff;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  letter-spacing: 0.03em;
+  user-select: none;
 }
-button:hover {
-  background: linear-gradient(145deg, #bce6d2, #e0fff9);
-  box-shadow: 9px 9px 19px #b2d9c6, -9px -9px 19px #f0ffff;
-}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
 textarea {
-  min-width: 30vw;
-  margin: 10px auto;
-  padding: 20px;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: 1.8px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 2px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.4);
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button[type="submit"] {
+  background-color: #2980b9;
+  color: white;
+  padding: 14px 0;
   border: none;
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow: inset 9px 9px 19px #d9d9d9, inset -9px -9px 19px
-              #ffffff;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.25s ease;
+  letter-spacing: 0.05em;
+  box-shadow: 0 5px 12px rgba(41, 128, 185, 0.5);
+  user-select: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #1c5980;
+  box-shadow: 0 8px 20px rgba(28, 89, 128, 0.7);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 10px rgba(28, 89, 128, 0.9);
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .form_wrapper {
+    padding: 30px 20px;
+    margin: 40px 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
 }

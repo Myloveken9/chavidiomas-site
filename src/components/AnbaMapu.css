@@ -1,30 +1,93 @@
-/* src/pages/AnbaMapu.css */
+/* src/components/AnbaMapu.css */
 
 .anba-mapu {
-  padding: 40px;
-  background-color: #fff;
+  max-width: 700px;
+  margin: 60px auto;
+  background: #f9fafb;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  color: #2c3e50;
 }
 
 .anba-mapu h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 20px;
-  color: #2a7ae4;
+  letter-spacing: 0.04em;
+  color: #34495e;
 }
 
 .anba-mapu p {
-  margin-bottom: 20px;
   font-size: 1.1rem;
-  color: #333;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: #555e68;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.botao.padrao {
-  background-color: #2a7ae4;
-  color: white;
-  padding: 10px 20px;
+.anba-mapu .botao {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #2980b9;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
 }
-.botao.padrao:hover {
-  background-color: #1a5bb8;
+
+.anba-mapu .botao:hover,
+.anba-mapu .botao:focus {
+  background-color: #1c5980;
+  box-shadow: 0 8px 22px rgba(28, 89, 128, 0.8);
+  outline: none;
+}
+
+.anba-mapu .botao:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(28, 89, 128, 0.9);
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .anba-mapu {
+    padding: 30px 20px;
+    margin: 40px 15px;
+  }
+
+  .anba-mapu h2 {
+    font-size: 1.8rem;
+  }
+
+  .anba-mapu p {
+    font-size: 1rem;
+  }
+
+  .anba-mapu .botao {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Ajoute en début ou fin du fichier */
+
+.fade-in-hidden {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }

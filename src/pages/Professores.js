@@ -14,7 +14,7 @@ const Professores = () => {
             <img src={hervens} alt="Tradutor Hervens" />
             <h3>Tradutor Hervens</h3>
             <p>
-              Nativo do Haiti, tradutor e professor de crioulo haitiano e francês. Formado em Letras e apaixonado pela educação e pela diversidade linguística.
+              Nativo do Haiti, professor de crioulo haitiano e francês. Formado em Letras e apaixonado pela educação e pela diversidade linguística.
             </p>
           </div>
           <div className="card">
