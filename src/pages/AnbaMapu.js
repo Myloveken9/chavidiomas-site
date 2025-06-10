@@ -47,7 +47,7 @@ const AnbaMapu = () => {
     >
       <h2>Clube de Conversas - ANBA MAPU</h2>
       <p>
-        Nesse link você encontra a Cartilha do clube de conversa em Crioulo, Francês e/ou Português Língua de Acolhimento.
+        Você encontra a Cartilha do clube de conversa em Crioulo, Francês e/ou Português Língua de Acolhimento.
       </p>
 
       <div className="cartillage-images">
