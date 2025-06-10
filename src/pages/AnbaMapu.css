@@ -7,6 +7,7 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  box-sizing: border-box;
 }
 
 .anba-mapu h2 {
@@ -29,10 +30,10 @@
   border-bottom: 2px solid #f9a825;
   padding-bottom: 8px;
 }
+
 .botao.padrao:focus {
   outline: 3px solid #f9a825;
 }
-
 
 .cartillage-images {
   display: grid;
@@ -88,21 +89,23 @@
   .cartillage-images {
     grid-template-columns: 1fr;
   }
-  
+
   .anba-mapu h2 {
     font-size: 2rem;
   }
-  
+
   .botao.padrao {
     padding: 10px 24px;
     font-size: 1rem;
   }
 }
+
+/* Modal styles */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9999; /* plus haut */
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
@@ -110,13 +113,22 @@
   align-items: center;
   justify-content: center;
   cursor: zoom-out;
+  padding: 20px; /* pour éviter que l’image touche les bords */
+  box-sizing: border-box;
+  overflow: auto; /* scroll si image trop grande */
 }
 
 .modal img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 80vh;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.modal img:hover {
+  transform: scale(1.02);
 }
 
 .modal .close {
@@ -127,10 +139,18 @@
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  user-select: none;
 }
-.modal img {
-  transition: transform 0.3s ease;
-}
-.modal img:hover {
-  transform: scale(1.02);
+
+/* Responsive modal */
+@media (max-width: 600px) {
+  .modal img {
+    max-height: 70vh;
+  }
+
+  .modal .close {
+    top: 10px;
+    right: 15px;
+    font-size: 1.6rem;
+  }
 }

@@ -13,13 +13,14 @@ import cartillage9 from '../assets/images/cartillage9.jpg';
 const AnbaMapu = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+  const [modalImg, setModalImg] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // stop observing after first appear
+          observer.disconnect();
         }
       },
       { threshold: 0.2 }
@@ -28,7 +29,23 @@ const AnbaMapu = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Tableau des images importées
+  // Bloque le scroll du body et compense la largeur de la scrollbar quand modal est ouverte
+  useEffect(() => {
+    if (modalImg) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+  }, [modalImg]);
+
   const images = [
     cartillage1,
     cartillage2,
@@ -51,14 +68,14 @@ const AnbaMapu = () => {
         Nesse link você encontra a Cartilha do clube de conversa em Crioulo, Francês e/ou Português Língua de Acolhimento.
       </p>
 
-      {/* Conteneur des images */}
-      <div className="cartillage-images" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
+      <div className="cartillage-images">
         {images.map((src, idx) => (
           <img
             key={idx}
             src={src}
             alt={`Cartillage ${idx + 1}`}
-            style={{ width: '80px', height: 'auto', borderRadius: '8px', objectFit: 'cover' }}
+            className="cartillage-img"
+            onClick={() => setModalImg(src)}
           />
         ))}
       </div>
@@ -71,6 +88,19 @@ const AnbaMapu = () => {
       >
         Ver Cartilha
       </a>
+
+      {modalImg && (
+        <div className="modal" onClick={() => setModalImg(null)}>
+          <img
+            src={modalImg}
+            alt="Cartillage fullscreen"
+            onClick={(e) => e.stopPropagation()} // Empêche fermeture au clic sur l’image
+          />
+          <span className="close" onClick={() => setModalImg(null)}>
+            &times;
+          </span>
+        </div>
+      )}
     </section>
   );
 };

@@ -13,7 +13,6 @@ import cartillage9 from '../assets/images/cartillage9.jpg';
 const AnbaMapu = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
-  const [modalImg, setModalImg] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,7 +57,6 @@ const AnbaMapu = () => {
             src={src}
             alt={`Cartillage ${idx + 1}`}
             className="cartillage-img"
-            onClick={() => setModalImg(src)}
           />
         ))}
       </div>
@@ -71,13 +69,6 @@ const AnbaMapu = () => {
       >
         Ver Cartilha
       </a>
-
-      {modalImg && (
-        <div className="modal" onClick={() => setModalImg(null)}>
-          <img src={modalImg} alt="Cartillage fullscreen" />
-          <span className="close">&times;</span>
-        </div>
-      )}
     </section>
   );
 };

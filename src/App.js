@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Servicos from './pages/Servicos';
 import Projetos from './pages/Projetos';
 import Depoimentos from './pages/Depoimentos';
-import AnbaMapu from './components/AnbaMapu';
+import AnbaMapu from './pages/AnbaMapu';
 import Contato from './pages/Contato'; // On garde le nom 'Contato'
 
 function App() {

@@ -25,17 +25,20 @@ const Navbar = () => {
   return (
     <>
       <header className="navbar fade-in-hidden" ref={navRef}>
-        <div className="navbar-logo">
-          <img src={logo} alt="Chavidiomas Logo" />
-        </div>
+        <div className="navbar-container">
+          <div className="navbar-logo">
+            <img src={logo} alt="Chavidiomas Logo" />
+          </div>
 
-        <nav className="navbar-links">
-          <Link to="/">Início</Link>
-          <Link to="/servicos">Serviços</Link>
-          <Link to="/projetos">Projetos</Link>
-          <Link to="/depoimentos">Depoimentos</Link>
-          <Link to="/contato">Contato</Link>
-        </nav>
+          <nav className="navbar-links">
+            <Link to="/">Início</Link>
+            <Link to="/servicos">Serviços</Link>
+            <Link to="/projetos">Projetos</Link>
+            <Link to="/depoimentos">Depoimentos</Link>
+            <Link to="/anbamapu">AnbaMapu</Link>
+            <Link to="/contato">Contato</Link>
+          </nav>
+        </div>
       </header>
 
       <div className="navbar-slogan">
