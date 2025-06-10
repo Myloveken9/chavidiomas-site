@@ -1,0 +1,4 @@
+; DNS Records for chavidiomas.com
+; Add these records to your DNS provider's configuration
+@    IN    A    216.198.79.193
+www    IN    CNAME    6b6b5ac32b5728eb.vercel-dns-017.com

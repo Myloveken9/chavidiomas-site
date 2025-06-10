@@ -11,13 +11,10 @@ const Servicos = () => {
     <div className="servico bloco-frances">
       <h2> 👩‍🎓 Aula de Francês</h2>
       <br></br>
-      <h3>“Francês, Crioulo e Português para quem busca evolução pessoal, acadêmica e profissional.”</h3>      
+      <h3>“Francês, para quem busca evolução pessoal, acadêmica e profissional.”</h3>      
       <p>
         <ul>
           <li>Você quer aprender francês?</li>
-        <li>Você quer aprender francês de verdade?</li> 
-        <li> Quer aprender francês com uma metodologia que realmente funciona? </li>
-        <li>Com um professor nativo e qualificado?</li>
         <br></br>
         </ul>
       </p>
@@ -34,7 +31,7 @@ const Servicos = () => {
       <h3>Você também pode ser um desses alunos ! </h3>
         <br></br>
 
-        <i><h3> Venha aprender francês com a gente!</h3></i>
+        <i><h3> Venha falar francês com a gente!</h3></i>
 
       <br></br>
 
@@ -110,9 +107,6 @@ const Servicos = () => {
     
     <li style={{ listStyleType: 'none' }}> 3. PROFISSIONALISMO </li>
     <p> - Trabalhamos com seriedade e atenção aos detalhes, mantendo a fidelidade ao texto original e a integridade de seu conteúdo.</p>
-
-    <li style={{ listStyleType: 'none' }}> 4. ENGAJAMENTO SOCIAL </li>
-    <p> - Acreditamos que a linguagem também transforma realidades. Por isso, desenvolvemos projetos gratuitos que têm impacto direto na vida de imigrantes e comunidades multilíngues: <strong>An Kreyòl</strong>, <strong>Português para Todos</strong> e <strong>Quintessence</strong>.</p>
     </ul>
       <p>
         <i> No trabalho, respeitamos a identidade de cada palavra, aplicamos conformidade na formatação. Porque para nós, TRADUZIR é respeitar a identidade de cada palavra fonte, o contexto de seu uso e suas raízes na cultura de origem.</i>

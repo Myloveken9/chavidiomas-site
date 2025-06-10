@@ -9,6 +9,8 @@
   color: #2e2e2e;
   line-height: 1.65;
   background-color: #fafafa;
+  text-decoration-color: 3a8d7f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Slogan : bandeau épuré */
@@ -25,37 +27,117 @@
   margin-bottom: 50px;
 }
 
-/* Section Quem Somos */
+/* === Section Quem Somos : style copié de Servicos.css === */
+
 .quem-somos {
-  margin-bottom: 60px;
+  max-width: 1100px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #fff;
 }
 
 .quem-somos h2 {
-  font-weight: 800;
   font-size: 2.4rem;
-  color: #2d6157;
-  margin-bottom: 24px;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #004d40; /* Vert foncé professionnel */
+  border-bottom: 3px solid #00796b;
+  padding-bottom: 10px;
 }
 
 .quem-somos p {
-  font-size: 1.1rem;
-  margin-bottom: 18px;
-  color: #444444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .quem-somos ul {
-  padding-left: 24px;
+  padding-left: 20px;
+  margin-bottom: 20px;
   color: #555;
-  font-size: 1rem;
 }
 
 .quem-somos ul li {
-  margin-bottom: 12px;
-  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  list-style-type: disc;
 }
 
-/* Section Serviços */
+.quem-somos i h2,
+.quem-somos i h3 {
+  font-style: italic;
+  color: #00695c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.quem-somos a.botao {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 10px rgb(0 121 107 / 0.3);
+  color: #fff;
+  margin-top: 15px;
+}
+
+.botao.frances {
+  background-color: #00897b;
+}
+
+.botao.frances:hover {
+  background-color: #00695c;
+  box-shadow: 0 6px 15px rgb(0 105 92 / 0.5);
+}
+
+.botao.crioulo {
+  background-color: #f9a825; /* Jaune doré */
+  color: #fff;
+}
+
+.botao.crioulo:hover {
+  background-color: #f57f17;
+  box-shadow: 0 6px 15px rgb(245 127 23 / 0.5);
+}
+
+/* Styles pour liens simples "Solicitar orçamento" */
+.quem-somos a {
+  color: #00796b;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.quem-somos a:hover {
+  color: #004d40;
+  text-decoration: none;
+}
+
+/* Supprime le style par défaut des listes dans la section tradução */
+.quem-somos ul li[style] {
+  list-style: none;
+  font-weight: 700;
+  color: #00796b;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.quem-somos ul li[style] + p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #444;
+}
+
+/* === Section Serviços === */
 .servicos {
   background-color: #fff;
   border-radius: 14px;
@@ -131,7 +213,7 @@
   background-size: cover;
   background-position: center center;
   border-color: #172a66;
-  color: #e3e9f0;
+  color: #13e5d7;
   box-shadow: 0 6px 20px rgb(23 42 102 / 0.25);
 }
 
@@ -215,7 +297,7 @@
     padding: 22px 15px;
   }
   .quem-somos h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .servico h3 {
     font-size: 1.3rem;
@@ -247,5 +329,3 @@
   transform: scale(1.07);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
-
-

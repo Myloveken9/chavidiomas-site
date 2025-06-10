@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p>&copy; {new Date().getFullYear()} Chavidiomas. Tous droits réservés.</p>
-        <p>Site conçu avec ❤️ par Chavidiomas</p>
+        <p>&copy; {new Date().getFullYear()} Chavidiomas. Desde 2017 - todos os direitos reservados.</p>
+        <p> Website professionally designed and developed by Mynek-Global ❤️ </p>
       </div>
     </footer>
   );

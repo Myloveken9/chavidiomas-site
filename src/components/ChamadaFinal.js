@@ -28,14 +28,14 @@ const ChamadaFinal = () => {
   return (
     <section ref={sectionRef} className="chamada-final fade-in-hidden">
       <h2>Chavidiomas</h2>
-      <p>8 anos de dedicação e foco transformado barreiras linguísticas em chaves e oportunidades.</p>
+      <p>Transformado barreiras linguísticas em chaves e oportunidades desde 2017.</p>
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLScwZmESruG6BvoCbkM70i59lZnrL31XN9CzJQgcjyYnsnPDZA/viewform?usp=dialog"
         target="_blank"
         rel="noopener noreferrer"
         className="btn-pedir-orcamento"
       >
-        Pedir Orçamento
+        Entrar em contato
       </a>
     </section>
   );

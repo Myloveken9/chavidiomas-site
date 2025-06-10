@@ -23,18 +23,25 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="navbar fade-in-hidden" ref={navRef}>
-      <div className="navbar-logo">
-        <img src={logo} alt="Chavidiomas Logo" />
+    <>
+      <header className="navbar fade-in-hidden" ref={navRef}>
+        <div className="navbar-logo">
+          <img src={logo} alt="Chavidiomas Logo" />
+        </div>
+
+        <nav className="navbar-links">
+          <Link to="/">Início</Link>
+          <Link to="/servicos">Serviços</Link>
+          <Link to="/projetos">Projetos</Link>
+          <Link to="/depoimentos">Depoimentos</Link>
+          <Link to="/contato">Contato</Link>
+        </nav>
+      </header>
+
+      <div className="navbar-slogan">
+        Chavidiomas, transformando barreiras linguísticas em chaves e oportunidades desde 2017.
       </div>
-      <nav className="navbar-links">
-        <Link to="/">Início</Link>
-        <Link to="/servicos">Serviços</Link>
-        <Link to="/projetos">Projetos</Link>
-        <Link to="/depoimentos">Depoimentos</Link>
-        <Link to="/contato">Contato</Link>
-      </nav>
-    </header>
+    </>
   );
 };
 
