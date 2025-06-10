@@ -160,8 +160,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Quem Somos */}
+      <AnbaMapu />
+      <Professores />
+        {/* Quem Somos */}
       <section className="quem-somos">
         <h2>Quem Somos</h2>
         <p>
@@ -206,8 +207,6 @@ const Home = () => {
         </p>
       </section>
 
-      <AnbaMapu />
-      <Professores />
       <Depoimentos />
       <ChamadaFinal />
     </>

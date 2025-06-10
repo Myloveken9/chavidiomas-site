@@ -13,7 +13,7 @@ import cartillage9 from '../assets/images/cartillage9.jpg';
 const AnbaMapu = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(null);
+  const [modalImg, setModalImg] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,11 +41,6 @@ const AnbaMapu = () => {
     cartillage9,
   ];
 
-  const openModal = (index) => setCurrentIndex(index);
-  const closeModal = () => setCurrentIndex(null);
-  const prevImage = () => setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  const nextImage = () => setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-
   return (
     <section
       ref={ref}
@@ -63,10 +58,11 @@ const AnbaMapu = () => {
             src={src}
             alt={`Cartillage ${idx + 1}`}
             className="cartillage-img"
-            onClick={() => openModal(idx)}
+            onClick={() => setModalImg(src)}
           />
         ))}
-</div>
+      </div>
+
       <a
         href="https://docs.google.com/presentation/d/1MdHyocwvWFyKGZUI7N1U922fqJacKLsDLTpfjD3JAAc/edit?usp=sharing"
         target="_blank"
@@ -76,24 +72,13 @@ const AnbaMapu = () => {
         Ver Cartilha
       </a>
 
-      {currentIndex !== null && (
-        <div className="modal" onClick={closeModal}>
-          <img
-            src={images[currentIndex]}
-            alt={`Cartillage ${currentIndex + 1}`}
-            onClick={(e) => e.stopPropagation()}
-          />
-          <span className="close" onClick={closeModal}>&times;</span>
-          <button className="nav-button left" onClick={(e) => { e.stopPropagation(); prevImage(); }}>
-            &#10094;
-          </button>
-          <button className="nav-button right" onClick={(e) => { e.stopPropagation(); nextImage(); }}>
-            &#10095;
-          </button>
+      {modalImg && (
+        <div className="modal" onClick={() => setModalImg(null)}>
+          <img src={modalImg} alt="Cartillage fullscreen" />
+          <span className="close">&times;</span>
         </div>
       )}
     </section>
-    
   );
 };
 

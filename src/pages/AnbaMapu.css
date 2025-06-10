@@ -1,5 +1,5 @@
 .anba-mapu {
-  max-width: 11000px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,15 +22,17 @@
 .anba-mapu p {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 30px;
   color: #333;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 30px;
   text-align: center;
-  border-bottom: 2px solid #f9a825; /* Jaune doré */
+  border-bottom: 2px solid #f9a825;
   padding-bottom: 8px;
 }
+.botao.padrao:focus {
+  outline: 3px solid #f9a825;
+}
+
 
 .cartillage-images {
   display: grid;
@@ -52,7 +54,7 @@
 
 .cartillage-img:hover {
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
-  transform: scale(1.5);
+  transform: scale(1.7);
 }
 
 .botao.padrao {
@@ -126,4 +128,9 @@
   font-weight: bold;
   cursor: pointer;
 }
-
+.modal img {
+  transition: transform 0.3s ease;
+}
+.modal img:hover {
+  transform: scale(1.02);
+}
