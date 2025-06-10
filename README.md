@@ -1,5 +1,26 @@
 # Getting Started with Create React App
 
+# Chavidiomas
+
+🌐 Chavidiomas – Language Learning & Translation Services
+Chavidiomas is a multilingual platform dedicated to teaching French, Haitian Creole, and Portuguese for immigrants, as well as providing professional translation, transcription, and subtitling services.
+We are committed to empowering individuals through language, cultural understanding, and high-quality linguistic support.
+
+Whether you're a newcomer looking to adapt quickly, a student aiming to strengthen your language skills, or a business in need of accurate translations — Chavidiomas is your reliable partner.
+
+🚀 What we offer:
+📘 Language Courses (French, Haitian Creole, Portuguese for Immigrants)
+
+🧑‍🏫 Experienced Instructors
+
+🌍 Translation & Subtitling Services
+
+🤝 Culturally-inclusive learning
+
+📄 Fast & accurate document transcription
+
+Join us and open new doors through language.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
