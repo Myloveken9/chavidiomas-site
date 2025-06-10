@@ -79,14 +79,13 @@
   display: inline-block;
   padding: 12px 28px;
   font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
+  font-weight: 700;
   border-radius: 40px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   user-select: none;
   box-shadow: 0 4px 10px rgb(0 121 107 / 0.3);
-  color: #fff;
+  color: #1c8074;
   margin-top: 15px;
 }
 

@@ -1,20 +1,161 @@
 /* Home.css */
 
-/* Container principal */
-.home-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 50px 25px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2e2e2e;
-  line-height: 1.65;
-  background-color: #fafafa;
-  text-decoration-color: 3a8d7f;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.banner-container {
+  position: relative;
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background-color: #e8f5f4;
+  margin-bottom: 50px;
 }
 
-/* Slogan : bandeau épuré */
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Boutons placés dans le coin inférieur droit */
+.banner-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 2;
+}
+
+/* Style boutons */
+.btn {
+  padding: 12px 20px;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: #00796b;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Bouton WhatsApp */
+.btn-whatsapp {
+  background-color: #25d366;
+}
+
+/* Bouton Orçamento, plus petit */
+.btn-orcamento {
+  background-color: #00796b;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-buttons {
+    bottom: 14px;
+    right: 14px;
+    gap: 8px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .btn-orcamento {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    max-height: none;
+    border-radius: 12px;
+  }
+
+  .banner-buttons {
+    bottom: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .btn-orcamento {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}
+
+.banner-image {
+  transition: transform 2.5s ease, filter .5s ease;
+}
+
+.banner-container:hover .banner-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.header-bg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* place le texte en bas */
+  align-items: center;       /* centre horizontalement */
+  background-image: url('/public/banner-chavidiomas.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  max-height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  padding-bottom: 20px; /* espace sous le texte */
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+/* Overlay dégradé pour meilleure lisibilité */
+.header-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(58, 141, 127, 0.8), transparent 70%);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* Slogan placé sur l’image, en bas */
 .slogan {
+  position: relative;
+  z-index: 2; /* au-dessus de l’overlay */
   background-color: #3a8d7f;
   color: #f0f6f5;
   text-align: center;
@@ -24,7 +165,33 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgb(58 141 127 / 0.4);
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  margin-bottom: 10px; /* espace réduit */
+  max-width: 90%; /* éviter les bords */
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+  .header-bg {
+    height: 25vh;
+  }
+  .slogan {
+    font-size: 1rem;
+    padding: 22px 15px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Container principal */
+.home-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e2e2e;
+  line-height: 1.65;
+  background-color: #fafafa;
+  text-decoration-color: #3a8d7f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* === Section Quem Somos : style copié de Servicos.css === */
@@ -176,13 +343,14 @@
 /* Boutons drapeaux - style moderne, clean */
 .botao {
   position: relative;
-  width: 260px;
-  height: 140px;
+  width: 240px;
+  height: 65px;
   border-radius: 16px;
   cursor: pointer;
   text-decoration: none;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   font-weight: 700;
   font-size: 1.25rem;
@@ -306,6 +474,9 @@
     height: 110px;
     font-size: 1rem;
   }
+  .header-bg {
+    height: 25vh; /* Hauteur réduite sur mobile */
+  }
 }
 
 /* === Images avec effet de zoom au survol === */
@@ -329,3 +500,280 @@
   transform: scale(1.07);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
+/* src/pages/AnbaMapu.css */
+
+.anba-mapu {
+  padding: 30px 20px;
+  background-color: #fff;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.anba-mapu h2 {
+  margin-bottom: 20px;
+  color: #2a7ae4;
+  font-size: 2rem;
+}
+
+.anba-mapu p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+.cartillage-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-items: center;
+}
+
+.cartillage-img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartillage-img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.botao.padrao {
+  background-color: #2a7ae4;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.botao.padrao:hover,
+.botao.padrao:focus {
+  background-color: #1b5fd1;
+  outline: none;
+}
+
+/* Petits écrans */
+@media (max-width: 480px) {
+  .anba-mapu h2 {
+    font-size: 1.5rem;
+  }
+  .anba-mapu p {
+    font-size: 1rem;
+  }
+  .cartillage-images {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+  }
+  .cartillage-img {
+    max-width: 80px;
+  }
+  .botao.padrao {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+/* ===== Modifications pour responsivité améliorée ===== */
+
+/* Bannière et boutons */
+.banner-container {
+  max-height: 700px;
+}
+
+@media (max-width: 900px) {
+  .banner-container {
+    max-height: 500px;
+  }
+  .banner-buttons {
+    bottom: 16px;
+    right: 16px;
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .btn {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+  .btn-orcamento {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-container {
+    max-height: 400px;
+  }
+  .banner-buttons {
+    bottom: 12px;
+    right: 12px;
+    gap: 6px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    width: 100%;
+    max-width: 160px;
+  }
+  .btn-orcamento {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    max-height: none;
+    border-radius: 12px;
+  }
+  .banner-buttons {
+    bottom: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 140px;
+  }
+  .btn-orcamento {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    max-width: 120px;
+  }
+}
+
+/* Container principal */
+.home-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 25px;
+}
+
+@media (max-width: 900px) {
+  .home-container {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 30px 15px;
+  }
+}
+
+/* Section Quem Somos */
+.quem-somos {
+  max-width: 1100px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 900px) {
+  .quem-somos {
+    padding: 0 15px;
+    margin: 30px auto 40px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .quem-somos h2 {
+    font-size: 1.8rem;
+  }
+  .quem-somos p,
+  .quem-somos ul li {
+    font-size: 0.95rem;
+  }
+  .quem-somos {
+    padding: 0 12px;
+    margin: 20px auto 30px auto;
+  }
+}
+
+/* Section Services - boutons */
+.botao-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .botao-container {
+    gap: 20px;
+  }
+  .botao {
+    width: 100%;
+    max-width: 320px;
+    height: 130px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .botao {
+    height: 110px;
+    font-size: 1rem;
+    max-width: 280px;
+  }
+}
+
+/* Header background */
+.header-bg {
+  height: 40vh;
+  max-height: 500px;
+}
+
+@media (max-width: 900px) {
+  .header-bg {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-bg {
+    height: 25vh;
+  }
+}
+
+/* Slogan */
+.slogan {
+  font-size: 1.25rem;
+  padding: 28px 18px;
+  max-width: 90%;
+}
+
+@media (max-width: 900px) {
+  .slogan {
+    font-size: 1.1rem;
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    font-size: 1rem;
+    padding: 22px 15px;
+    margin-bottom: 8px;
+  }
+}
+

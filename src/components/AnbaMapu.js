@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './AnbaMapu.css';
-
-// Si tu utilises import direct (ex: Webpack ou CRA)
 import cartillage1 from '../assets/images/cartillage1.jpg';
 import cartillage2 from '../assets/images/cartillage2.jpg';
 import cartillage3 from '../assets/images/cartillage3.jpg';

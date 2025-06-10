@@ -5,7 +5,7 @@ import depo1 from '../assets/images/depoimento1.jpg';
 import depo2 from '../assets/images/depoimento2.jpg';
 import depo3 from '../assets/images/depoimento3.jpg';
 import depo4 from '../assets/images/depoimento4.jpg';
-import depo5 from '../assets/images/depoimento5.jpg'
+import depo5 from '../assets/images/depoimento5.jpg';
 import depo6 from '../assets/images/depoimento6.jpg';
 import depo7 from '../assets/images/depoimento7.jpg';
 import depo8 from '../assets/images/depoimento8.jpg';

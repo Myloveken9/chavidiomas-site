@@ -63,7 +63,7 @@ const Servicos = () => {
       <br></br>
 
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScwZmESruG6BvoCbkM70i59lZnrL31XN9CzJQgcjyYnsnPDZA/viewform?usp=dialog" target="_blank" rel="noreferrer" className="botao crioulo">
-        Ingressar na próxima turma
+        Ingressar na turma
       </a>
     </div>
 
@@ -113,7 +113,6 @@ const Servicos = () => {
       </p>
 
       <br></br>
-      <h3> 👇 Solicite um orçamento personalizado </h3>
       <Link to="/contato" className="">
         Solicitar orçamento 
 </Link>
@@ -161,8 +160,7 @@ const Servicos = () => {
       <br></br>
 <h1>🔗 Solicite um orçamento e leve sua mensagem além das fronteiras.</h1>
       
-                  <h3> 👇 Solicite um orçamento personalizado </h3>
-                  <Link to="/contato" className="">
+                        <Link to="/contato" className="">
                     Solicitar orçamento 
             </Link>
     </div>
