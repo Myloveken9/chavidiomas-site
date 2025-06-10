@@ -1,3 +1,5 @@
+/* src/pages/AnbaMapu.css */
+
 .anba-mapu {
   max-width: 1200px;
   margin: 40px auto;
@@ -15,7 +17,7 @@
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
-  color: #004d40; /* Vert foncé */
+  color: #004d40;
   border-bottom: 3px solid #00796b;
   padding-bottom: 10px;
 }
@@ -78,7 +80,7 @@
   box-shadow: 0 6px 15px rgb(0 73 64 / 0.5);
 }
 
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 900px) {
   .cartillage-images {
     grid-template-columns: repeat(2, 1fr);
@@ -105,7 +107,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999; /* plus haut */
+  z-index: 9999;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
@@ -113,9 +115,9 @@
   align-items: center;
   justify-content: center;
   cursor: zoom-out;
-  padding: 20px; /* pour éviter que l’image touche les bords */
+  padding: 20px;
   box-sizing: border-box;
-  overflow: auto; /* scroll si image trop grande */
+  overflow: auto;
 }
 
 .modal img {
@@ -142,7 +144,6 @@
   user-select: none;
 }
 
-/* Responsive modal */
 @media (max-width: 600px) {
   .modal img {
     max-height: 70vh;
@@ -152,5 +153,34 @@
     top: 10px;
     right: 15px;
     font-size: 1.6rem;
+  }
+}
+
+/* Footer (centré sur mobile) */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f4f4f4;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.85rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

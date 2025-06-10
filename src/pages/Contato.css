@@ -78,6 +78,26 @@ button[type="submit"]:active {
   box-shadow: 0 4px 10px rgba(28, 89, 128, 0.9);
 }
 
+/* Footer style for this page */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f4f4f4;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.85rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* Responsive */
 
 @media (max-width: 480px) {
@@ -97,5 +117,12 @@ button[type="submit"]:active {
   button[type="submit"] {
     font-size: 1rem;
     padding: 12px 0;
+  }
+
+  footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
