@@ -1,6 +1,7 @@
 // src/pages/Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';  // pour le carousel
 import './Home.css';
 import AnbaMapu from './AnbaMapu';
 import Professores from './Professores';
@@ -8,28 +9,39 @@ import Depoimentos from './Depoimentos';
 import ChamadaFinal from '../components/ChamadaFinal';
 
 const Home = () => {
+  // config basique du carousel
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  };
+
   return (
     <>
       <section className="banner-container">
-  <img
-    src="/banner-chavidiomas.jpg"
-    alt="Banner Chavidiomas"
-    className="banner-image"
-  />
-  <div className="banner-buttons">
-    <a
-      href="https://wa.me/+5511994951277"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="btn btn-whatsapp"
-    >
-      Fale no WhatsApp
-    </a>
-    <Link to="/contato" className="btn btn-orcamento">
-      Solicitar orçamento
-    </Link>
-  </div>
-</section>
+        <img
+          src="/banner-chavidiomas.jpg"
+          alt="Banner Chavidiomas"
+          className="banner-image"
+        />
+        <div className="banner-buttons">
+          <a
+            href="https://wa.me/+5511994951277"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-whatsapp"
+          >
+            Fale no WhatsApp
+          </a>
+          <Link to="/contato" className="btn btn-orcamento">
+            Solicitar orçamento
+          </Link>
+        </div>
+      </section>
 
       {/* Serviços */}
       <section className="servicos">
@@ -153,61 +165,35 @@ const Home = () => {
             <p><i>Venha tornar seu projeto, seja filme, documentário, vídeo institucional ou outro conteúdo digital, acessível a um público-alvo do além!</i></p>
             <p><i>Seja um filme, documentário, vídeo institucional, campanha publicitária ou qualquer outro formato digital, conte com a Chavidiomas para tornar seu conteúdo acessível, atrativo e profissional para públicos que falam Francês ou Crioulo Haitiano.</i></p>
             <h1>🔗 Solicite um orçamento e leve sua mensagem além das fronteiras.</h1>
-            <br></br>
+            <br />
             <Link to="/contato" className="botao">
               Solicitar orçamento
             </Link>
           </div>
         </div>
       </section>
-      <AnbaMapu />
-      <Professores />
-        {/* Quem Somos */}
-      <section className="quem-somos">
-        <h2>Quem Somos</h2>
-        <p>
-          Bem-vindo/a/e à Chavidiomas, uma empresa dedicada aos idiomas francês e crioulo haitiano. Fundada em 2017 em São Paulo, nossa missão é proporcionar a chave do tamanho para abrir as portas do mundo para seus projetos através de serviços linguísticos personalizados.
-        </p>
-        <p>
-          Na Chavidiomas, oferecemos aulas de:
-          <br />
-          <strong>- Francês (desde 2017)</strong>
-          <br />
-          <strong>- Crioulo Haitiano (desde 2018)</strong>
-          <br />
-          <strong>- Português língua de acolhimento (desde 2020)</strong>
-        </p>
-        <p>
-          Nosso ensino é moldado às necessidades de cada aluno, seja para intercâmbios, viagens, crescimento profissional ou outros projetos pessoais. Além disso, já ajudamos várias pessoas a se destacarem em suas áreas de interesse.
-        </p>
-        <p>
-          Também somos especializados em serviços de tradução, legendagem e transcrição nas seguintes combinações linguísticas:
-          <br />
-          <strong>Português, Crioulo Haitiano e Francês</strong>
-        </p>
-        <p>
-          Nossos profissionais nativos garantem precisão e qualidade em cada projeto. Os princípios e valores de nosso trabalho são:
-        </p>
-        <ul>
-          <li>
-            <strong>CONFIDENCIALIDADE:</strong> Asseguramos total sigilo das informações que nos são confiadas.
-          </li>
-          <li>
-            <strong>EFICIÊNCIA:</strong> Maximizamos o tempo e os recursos para oferecer sempre serviços pontuais e de qualidade.
-          </li>
-          <li>
-            <strong>PROFISSIONALISMO:</strong> Respeitamos a identidade de cada palavra utilizada no idioma de partida para a tradução mais fiel no idioma de chegada.
-          </li>
-          <li>
-            <strong>ENGAJAMENTO SOCIAL:</strong> Contribuímos para uma sociedade mais conectada e solidária. Sempre buscando ampliar nosso impacto social, desenvolvemos três projetos gratuitos que têm transformado vidas: <strong>An Kreyòl</strong>, <strong>Português para Todos</strong> e <strong>Quintessence</strong>.
-          </li>
-        </ul>
-        <p>
-          Na Chavidiomas, trabalhamos para ser mais do que uma empresa. Queremos ser a ponte que conecta culturas e ajuda a construir um mundo mais inclusivo e colaborativo.
-        </p>
+
+      {/* CAROUSEL après services */}
+      <section className="carrousel-section" style={{ maxWidth: '800px', margin: '30px auto' }}>
+        <Slider {...settings}>
+          <div>
+            <img src="/carousel1.jpg" alt="Imagem 1" style={{ width: '100%', borderRadius: '10px' }} />
+          </div>
+          <div>
+            <img src="/carousel2.jpg" alt="Imagem 2" style={{ width: '100%', borderRadius: '10px' }} />
+          </div>
+          <div>
+            <img src="/carousel3.jpg" alt="Imagem 3" style={{ width: '100%', borderRadius: '10px' }} />
+          </div>
+        </Slider>
       </section>
 
+      <AnbaMapu />
+
+      <Professores />
+
       <Depoimentos />
+
       <ChamadaFinal />
     </>
   );

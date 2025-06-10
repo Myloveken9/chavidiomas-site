@@ -9,6 +9,7 @@ import Depoimentos from './pages/Depoimentos';
 import AnbaMapu from './pages/AnbaMapu';
 import Contato from './pages/Contato'; // On garde le nom 'Contato'
 
+
 function App() {
   return (
     <Router>
