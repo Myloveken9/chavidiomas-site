@@ -20,8 +20,13 @@
   display: block;
   object-fit: cover;
   border-radius: 16px;
+  transition: transform 2.5s ease, filter 0.5s ease;
 }
 
+.banner-container:hover .banner-image{
+transform: scale(1.05);
+filter: brightness(1.1);
+ }
 /* Boutons placés dans le coin inférieur droit */
 .banner-buttons {
   position: absolute;
@@ -45,11 +50,15 @@
   background-color: #00796b;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   opacity: 0.9;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 /* Bouton WhatsApp */
@@ -159,7 +168,7 @@
 .slogan {
   position: relative;
   z-index: 2; /* au-dessus de l’overlay */
-  background-color: #3a8d7f;
+  background-color: #24445c;
   color: #f0f6f5;
   text-align: center;
   font-weight: 700;
@@ -213,7 +222,7 @@
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
-  color: #004d40; /* Vert foncé professionnel */
+  color: #24425C; /* Vert foncé professionnel */
   border-bottom: 3px solid #00796b;
   padding-bottom: 10px;
 }
@@ -222,7 +231,7 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 15px;
-  color: #333;
+  color: #24425C;
 }
 
 .quem-somos ul {
@@ -237,12 +246,10 @@
   list-style-type: disc;
 }
 
-.quem-somos i h2,
-.quem-somos i h3 {
+.quem-somos i {
   font-style: italic;
   color: #00695c;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .quem-somos a.botao {
@@ -312,35 +319,34 @@
   background-color: #fff;
   border-radius: 14px;
   padding: 30px 40px;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.07);
-  margin-bottom: 70px;
+  box-shadow: 0 8px 18px rgb(0 0 0 / 0.01);
+  max-width: 1100px;
+  margin: 60px auto 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.servico {
-  margin-bottom: 30px;
-}
-
-.servico h3 {
-  font-size: 1.6rem;
+.servicos h2 {
+  color: #24425C;
   font-weight: 700;
-  color: #2a5a50;
-  margin-bottom: 12px;
-  letter-spacing: 0.02em;
+  font-size: 2.4rem;
+  margin-bottom: 32px;
+  text-align: center;
+  border-bottom: 3px solid #00796b;
+  padding-bottom: 12px;
+
 }
 
-.servico p {
+.servicos ul {
+  list-style: disc inside;
+  color: #24425C;
   font-size: 1rem;
-  color: #4a4a4a;
-  line-height: 1.6;
+  line-height: 1,6;
+  max-width: 900px;
+  margin: 0 auto 30px;
 }
 
-/* Conteneur des boutons */
-.botao-container {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-top: 50px;
+.servico ul li {
+  margin-bottom: 10px;
 }
 
 /* Boutons drapeaux - style moderne, clean */
@@ -422,361 +428,261 @@
   z-index: 1;
   pointer-events: none;
 }
-
-/* Pied de page */
-.footer {
-  background-color: #f0f4f5;
-  color: #555;
-  text-align: center;
-  padding: 24px 20px;
-  margin-top: 60px;
-  font-size: 0.95rem;
-  border-radius: 10px;
-  box-shadow: inset 0 0 12px #d3d9db;
-}
-
-.footer a {
-  color: #0d7b74;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-.footer a:hover {
-  color: #138a82;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .botao-container {
-    gap: 20px;
+/* Ajustements responsive généraux */
+@media (max-width: 768px) {
+  .servicos {
+    padding: 20px 25px;
   }
-  .botao {
-    width: 100%;
-    max-width: 320px;
-    height: 130px;
-    font-size: 1.1rem;
+  .servicos h2 {
+    font-size: 2rem;
   }
-  .home-container {
-    padding: 30px 15px;
+  .servicos ul {
+    font-size: 0.95rem;
+  }
+  .servicos a.botao {
+    padding: 12px 24px;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .slogan {
-    font-size: 1rem;
-    padding: 22px 15px;
+  .servicos {
+    padding: 15px 15px;
   }
-  .quem-somos h2 {
-    font-size: 1.5rem;
+  .servicos h2 {
+    font-size: 1.8rem;
   }
-  .servico h3 {
-    font-size: 1.3rem;
+  .servicos ul {
+    font-size: 0.9rem;
   }
-  .botao {
-    height: 110px;
-    font-size: 1rem;
-  }
-  .header-bg {
-    height: 25vh; /* Hauteur réduite sur mobile */
+  .servicos a.botao {
+    padding: 10px 18px;
+    font-size: 0.9rem;
   }
 }
 
-/* === Images avec effet de zoom au survol === */
-
-.img-hover-zoom {
-  display: inline-block;
-  overflow: hidden;
-  border-radius: 12px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.img-hover-zoom img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.4s ease;
-  border-radius: 12px;
-}
-
-.img-hover-zoom:hover img {
-  transform: scale(1.07);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-}
-/* src/pages/AnbaMapu.css */
-
+/* === Section Anba Mapu === */
 .anba-mapu {
-  padding: 30px 20px;
-  background-color: #fff;
+  max-width: 1100px;
+  margin: 50px auto 70px;
+  padding: 25px 20px;
+  background-color: #e8f5f4;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 121, 107, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #24425C;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .anba-mapu h2 {
-  margin-bottom: 20px;
-  color: #2a7ae4;
-  font-size: 2rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #00796b;
 }
 
 .anba-mapu p {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.4;
-  padding: 0 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
-.cartillage-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
-  justify-items: center;
+/* Responsive Anba Mapu */
+@media (max-width: 768px) {
+  .anba-mapu {
+    padding: 20px 15px;
+  }
+  .anba-mapu h2 {
+    font-size: 2rem;
+  }
+  .anba-mapu p {
+    font-size: 0.95rem;
+  }
 }
 
-.cartillage-img {
-  width: 100%;
-  max-width: 120px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* === Section Professores === */
+.professores {
+  max-width: 1100px;
+  margin: 60px auto 70px;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(36, 66, 92, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #24425C;
+  text-align: center;
 }
 
-.cartillage-img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+.professores h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-.botao.padrao {
-  background-color: #2a7ae4;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+.professor {
   display: inline-block;
+  max-width: 250px;
+  margin: 15px 20px;
+  vertical-align: top;
+}
+
+.professor img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 121, 107, 0.2);
+  margin-bottom: 15px;
+}
+
+.professor h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.professor p {
+  font-size: 1rem;
+  font-style: italic;
+  color: #00695c;
+}
+
+/* Responsive Professeurs */
+@media (max-width: 768px) {
+  .professor {
+    max-width: 180px;
+    margin: 15px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .professor {
+    max-width: 140px;
+    margin: 10px 8px;
+  }
+  .professor h3 {
+    font-size: 1rem;
+  }
+  .professor p {
+    font-size: 0.9rem;
+  }
+}
+
+/* === Section Depoimentos === */
+.depoimentos {
+  max-width: 1100px;
+  margin: 50px auto 70px;
+  padding: 25px 20px;
+  background-color: #e8f5f4;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 121, 107, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #24425C;
+  text-align: center;
+}
+
+.depoimentos h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.depoimentos blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 20px auto;
+  max-width: 850px;
+  line-height: 1.6;
+  color: #00695c;
+  position: relative;
+  padding-left: 40px;
+}
+
+.depoimentos blockquote::before {
+  content: "“";
+  font-size: 3rem;
+  color: #00796b;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  font-family: serif;
+}
+
+/* Responsive Depoimentos */
+@media (max-width: 768px) {
+  .depoimentos blockquote {
+    font-size: 1rem;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .depoimentos blockquote {
+    font-size: 0.95rem;
+    padding-left: 25px;
+  }
+}
+
+/* === Section Chamada Final === */
+.chamada-final {
+  background-color: #24425C;
+  color: #f0f6f5;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chamada-final h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.chamada-final p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  font-weight: 600;
+}
+
+.chamada-final a.botao {
+  background-color: #f9a825;
+  color: #24425C;
+  font-weight: 700;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  border-radius: 40px;
+  box-shadow: 0 6px 18px rgba(249, 168, 37, 0.5);
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.botao.padrao:hover,
-.botao.padrao:focus {
-  background-color: #1b5fd1;
-  outline: none;
+.chamada-final a.botao:hover {
+  background-color: #f57f17;
+  box-shadow: 0 8px 22px rgba(245, 127, 23, 0.7);
 }
 
-/* Petits écrans */
-@media (max-width: 480px) {
-  .anba-mapu h2 {
-    font-size: 1.5rem;
+/* Responsive Chamada Final */
+@media (max-width: 768px) {
+  .chamada-final h2 {
+    font-size: 2rem;
   }
-  .anba-mapu p {
+  .chamada-final p {
     font-size: 1rem;
   }
-  .cartillage-images {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 10px;
-  }
-  .cartillage-img {
-    max-width: 80px;
-  }
-  .botao.padrao {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-}
-/* ===== Modifications pour responsivité améliorée ===== */
-
-/* Bannière et boutons */
-.banner-container {
-  max-height: 700px;
-}
-
-@media (max-width: 900px) {
-  .banner-container {
-    max-height: 500px;
-  }
-  .banner-buttons {
-    bottom: 16px;
-    right: 16px;
-    gap: 8px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  .btn {
-    font-size: 0.95rem;
-    padding: 10px 16px;
-  }
-  .btn-orcamento {
-    font-size: 0.85rem;
-    padding: 7px 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .banner-container {
-    max-height: 400px;
-  }
-  .banner-buttons {
-    bottom: 12px;
-    right: 12px;
-    gap: 6px;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .btn {
-    font-size: 0.9rem;
-    padding: 8px 14px;
-    width: 100%;
-    max-width: 160px;
-  }
-  .btn-orcamento {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-    max-width: 140px;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner-container {
-    max-height: none;
-    border-radius: 12px;
-  }
-  .banner-buttons {
-    bottom: 10px;
-    right: 10px;
-    gap: 6px;
-  }
-  .btn {
-    font-size: 0.85rem;
-    padding: 8px 12px;
-    width: 100%;
-    max-width: 140px;
-  }
-  .btn-orcamento {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-    max-width: 120px;
-  }
-}
-
-/* Container principal */
-.home-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 50px 25px;
-}
-
-@media (max-width: 900px) {
-  .home-container {
-    padding: 40px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-container {
-    padding: 30px 15px;
-  }
-}
-
-/* Section Quem Somos */
-.quem-somos {
-  max-width: 1100px;
-  margin: 40px auto 60px auto;
-  padding: 0 20px;
-}
-
-@media (max-width: 900px) {
-  .quem-somos {
-    padding: 0 15px;
-    margin: 30px auto 40px auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .quem-somos h2 {
-    font-size: 1.8rem;
-  }
-  .quem-somos p,
-  .quem-somos ul li {
-    font-size: 0.95rem;
-  }
-  .quem-somos {
-    padding: 0 12px;
-    margin: 20px auto 30px auto;
-  }
-}
-
-/* Section Services - boutons */
-.botao-container {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-@media (max-width: 900px) {
-  .botao-container {
-    gap: 20px;
-  }
-  .botao {
-    width: 100%;
-    max-width: 320px;
-    height: 130px;
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .botao {
-    height: 110px;
+  .chamada-final a.botao {
+    padding: 14px 32px;
     font-size: 1rem;
-    max-width: 280px;
   }
-}
-
-/* Header background */
-.header-bg {
-  height: 40vh;
-  max-height: 500px;
-}
-
-@media (max-width: 900px) {
-  .header-bg {
-    height: 30vh;
+  .chamada-final {
+    color: #24425C;
   }
 }
 
 @media (max-width: 480px) {
-  .header-bg {
-    height: 25vh;
+  .chamada-final h2 {
+    font-size: 1.7rem;
   }
-}
-
-/* Slogan */
-.slogan {
-  font-size: 1.25rem;
-  padding: 28px 18px;
-  max-width: 90%;
-}
-
-@media (max-width: 900px) {
-  .slogan {
-    font-size: 1.1rem;
-    padding: 24px 16px;
+    .chamada-final p {
+      font-size: 0.95rem;
+    }
   }
-}
-
-@media (max-width: 480px) {
-  .slogan {
-    font-size: 1rem;
-    padding: 22px 15px;
-    margin-bottom: 8px;
-  }
-}
-

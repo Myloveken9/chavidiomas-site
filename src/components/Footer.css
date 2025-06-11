@@ -1,17 +1,32 @@
-/* src/components/Footer.css */
-
 .footer {
-  background-color: #509989;
+  background-color: #24445c;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 1px 10px;
   margin-top: 60px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Suppression des effets pouvant provoquer du flou */
+  /* backface-visibility: hidden; */
+  /* transform: translate3d(0,0,0); */
+  /* will-change: transform; */
+
+  /* Optionnel : améliore la netteté sur certains navigateurs */
+  text-rendering: geometricPrecision;
 }
 
 .footer a {
-  color: #00aced;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .footer a:hover {
@@ -19,7 +34,7 @@
 }
 
 .footer-content p {
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 .footer-links {
