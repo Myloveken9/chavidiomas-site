@@ -17,10 +17,10 @@
   background-color: #24445c;
   color: #f0f6f5;
   text-align: center;
-  padding: 5px 0px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 8px 2px rgba(0, 0, 0, 0.15);
-  margin: 10px auto;
+  margin: 1px auto;
   max-width: 1000px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
