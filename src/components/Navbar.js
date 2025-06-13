@@ -26,10 +26,12 @@ const Navbar = () => {
     <>
       <header className="navbar fade-in-hidden" ref={navRef}>
         <div className="navbar-container">
+          {/* Logo NON CLIQUABLE, aligné à gauche */}
           <div className="navbar-logo">
-            <img src={logo} alt="Chavidiomas Logo" />
+            <img src={logo} alt="Logo" />
           </div>
 
+          {/* Liens de navigation */}
           <nav className="navbar-links">
             <Link to="/">Início</Link>
             <Link to="/servicos">Serviços</Link>

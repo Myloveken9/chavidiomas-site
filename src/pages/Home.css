@@ -1,8 +1,7 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-/* Home.css */
-
+/* === Banner Principal === */
 .banner-container {
   position: relative;
   width: 100%;
@@ -23,23 +22,135 @@
   transition: transform 2.5s ease, filter 0.5s ease;
 }
 
-.banner-container:hover .banner-image{
-transform: scale(1.05);
-filter: brightness(1.1);
- }
-/* Boutons placés dans le coin inférieur droit */
+.banner-container:hover .banner-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* === Banner Principal === */
+.banner-container {
+  position: relative;
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background-color: #e8f5f4;
+  margin-bottom: 50px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 2.5s ease, filter 0.5s ease;
+}
+
+.banner-container:hover .banner-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* === Nouvelle disposition des boutons dans le banner === */
 .banner-buttons {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Pour laisser les boutons cliquables uniquement */
   z-index: 2;
 }
 
-/* Style boutons */
+/* Bouton WhatsApp en haut à droite */
+.banner-buttons .btn-whatsapp {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  pointer-events: all;
+  background-color: #25d366;
+}
+
+/* Bouton Orçamento en bas à gauche */
+.banner-buttons .btn-orcamento {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  pointer-events: all;
+  background-color: #00796b;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+/* Style général des boutons */
+.btn {
+  padding: 12px 20px;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* === Responsive des boutons du banner === */
+@media (max-width: 768px) {
+  .banner-buttons .btn-whatsapp {
+    top: 14px;
+    right: 14px;
+  }
+
+  .banner-buttons .btn-orcamento {
+    bottom: 14px;
+    left: 14px;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    max-height: none;
+    border-radius: 12px;
+  }
+
+  .banner-buttons .btn-whatsapp {
+    top: 12px;
+    right: 12px;
+  }
+
+  .banner-buttons .btn-orcamento {
+    bottom: 12px;
+    left: 12px;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+
+
+/* Style général des boutons */
 .btn {
   padding: 12px 20px;
   border-radius: 32px;
@@ -61,19 +172,18 @@ filter: brightness(1.1);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
-/* Bouton WhatsApp */
+/* Spécifiques */
 .btn-whatsapp {
   background-color: #25d366;
 }
 
-/* Bouton Orçamento, plus petit */
 .btn-orcamento {
   background-color: #00796b;
   font-size: 0.9rem;
   padding: 8px 16px;
 }
 
-/* Responsive */
+/* Responsive banner buttons */
 @media (max-width: 768px) {
   .banner-buttons {
     bottom: 14px;
@@ -115,33 +225,16 @@ filter: brightness(1.1);
   }
 }
 
-.banner-image {
-  transition: transform 2.5s ease, filter .5s ease;
-}
-
-.banner-container:hover .banner-image {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-.btn {
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-}
-
+/* === Header avec slogan === */
 .header-bg {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* place le texte en bas */
-  align-items: center;       /* centre horizontalement */
+  justify-content: flex-end;
+  align-items: center;
   background-image: url('/public/banner-chavidiomas.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 40vh;
@@ -149,12 +242,11 @@ filter: brightness(1.1);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
-  padding-bottom: 20px; /* espace sous le texte */
+  padding-bottom: 20px;
   box-sizing: border-box;
   z-index: 0;
 }
 
-/* Overlay dégradé pour meilleure lisibilité */
 .header-bg::before {
   content: "";
   position: absolute;
@@ -164,10 +256,9 @@ filter: brightness(1.1);
   z-index: 1;
 }
 
-/* Slogan placé sur l’image, en bas */
 .slogan {
   position: relative;
-  z-index: 2; /* au-dessus de l’overlay */
+  z-index: 2;
   background-color: #24445c;
   color: #f0f6f5;
   text-align: center;
@@ -177,15 +268,15 @@ filter: brightness(1.1);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgb(58 141 127 / 0.4);
   letter-spacing: 0.03em;
-  margin-bottom: 10px; /* espace réduit */
-  max-width: 90%; /* éviter les bords */
+  margin-bottom: 10px;
+  max-width: 90%;
 }
 
-/* Responsive mobile */
 @media (max-width: 480px) {
   .header-bg {
     height: 25vh;
   }
+
   .slogan {
     font-size: 1rem;
     padding: 22px 15px;
@@ -193,7 +284,7 @@ filter: brightness(1.1);
   }
 }
 
-/* Container principal */
+/* === Container principal === */
 .home-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -206,15 +297,13 @@ filter: brightness(1.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* === Section Quem Somos : style copié de Servicos.css === */
-
+/* === Section Quem Somos === */
 .quem-somos {
   max-width: 1100px;
   margin: 40px auto 60px auto;
   padding: 0 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
   background-color: #fff;
+  color: #222;
 }
 
 .quem-somos h2 {
@@ -222,7 +311,7 @@ filter: brightness(1.1);
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
-  color: #24425C; /* Vert foncé professionnel */
+  color: #24425C;
   border-bottom: 3px solid #00796b;
   padding-bottom: 10px;
 }
@@ -257,14 +346,12 @@ filter: brightness(1.1);
   padding: 12px 28px;
   font-size: 1.1rem;
   font-weight: 600;
-  text-decoration: none;
   border-radius: 40px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  user-select: none;
-  box-shadow: 0 4px 10px rgb(0 121 107 / 0.3);
   color: #fff;
   margin-top: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgb(0 121 107 / 0.3);
 }
 
 .botao.frances {
@@ -277,7 +364,7 @@ filter: brightness(1.1);
 }
 
 .botao.crioulo {
-  background-color: #f9a825; /* Jaune doré */
+  background-color: #f9a825;
   color: #fff;
 }
 
@@ -286,7 +373,6 @@ filter: brightness(1.1);
   box-shadow: 0 6px 15px rgb(245 127 23 / 0.5);
 }
 
-/* Styles pour liens simples "Solicitar orçamento" */
 .quem-somos a {
   color: #00796b;
   font-weight: 600;
@@ -298,7 +384,6 @@ filter: brightness(1.1);
   text-decoration: none;
 }
 
-/* Supprime le style par défaut des listes dans la section tradução */
 .quem-somos ul li[style] {
   list-style: none;
   font-weight: 700;
@@ -322,7 +407,6 @@ filter: brightness(1.1);
   box-shadow: 0 8px 18px rgb(0 0 0 / 0.01);
   max-width: 1100px;
   margin: 60px auto 80px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .servicos h2 {
@@ -333,14 +417,13 @@ filter: brightness(1.1);
   text-align: center;
   border-bottom: 3px solid #00796b;
   padding-bottom: 12px;
-
 }
 
 .servicos ul {
   list-style: disc inside;
   color: #24425C;
   font-size: 1rem;
-  line-height: 1,6;
+  line-height: 1.6;
   max-width: 900px;
   margin: 0 auto 30px;
 }
@@ -349,21 +432,20 @@ filter: brightness(1.1);
   margin-bottom: 10px;
 }
 
-/* Boutons drapeaux - style moderne, clean */
+/* === Boutons de langue avec drapeaux === */
 .botao {
   position: relative;
   width: 240px;
   height: 65px;
   border-radius: 16px;
   cursor: pointer;
-  text-decoration: none;
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: center;
   font-weight: 700;
   font-size: 1.25rem;
   color: #ffffff;
+  text-decoration: none;
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -371,7 +453,6 @@ filter: brightness(1.1);
   user-select: none;
 }
 
-/* Texte sur fond semi-transparent */
 .botao span {
   position: relative;
   z-index: 2;
@@ -382,43 +463,38 @@ filter: brightness(1.1);
   box-shadow: 0 2px 8px rgb(0 0 0 / 0.35);
 }
 
-/* Fond et bordure spécifiques */
-
 /* FRANCE */
 .botao.frances {
   background-image: url('/src/assets/images/france.png');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   border-color: #172a66;
   color: #13e5d7;
-  box-shadow: 0 6px 20px rgb(23 42 102 / 0.25);
 }
 
 /* HAITI */
 .botao.crioulo {
   background-image: url('/src/assets/images/haiti.png');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   border-color: #0eaea7;
   color: #dbf7f7;
-  box-shadow: 0 6px 20px rgb(14 174 167 / 0.3);
 }
 
-/* Bouton par défaut */
+/* Par défaut */
 .botao.padrao {
-  background: linear-gradient(135deg, #1e64d7 0%, #144fb2 100%);
+  background: linear-gradient(135deg, #1e64d7, #144fb2);
   border-color: #0c3a72;
-  box-shadow: 0 6px 20px rgb(12 58 114 / 0.4);
 }
 
-/* Hover : effet subtil d’agrandissement et lumière */
+/* Hover */
 .botao:hover {
   transform: scale(1.08);
   box-shadow: 0 14px 36px rgb(0 0 0 / 0.28);
   z-index: 3;
 }
 
-/* Overlay léger pour améliorer contraste texte */
+/* Overlay */
 .botao::after {
   content: "";
   position: absolute;
@@ -428,261 +504,39 @@ filter: brightness(1.1);
   z-index: 1;
   pointer-events: none;
 }
-/* Ajustements responsive généraux */
+
+/* Responsive */
 @media (max-width: 768px) {
   .servicos {
     padding: 20px 25px;
   }
+
   .servicos h2 {
     font-size: 2rem;
   }
+
   .servicos ul {
     font-size: 0.95rem;
   }
-  .servicos a.botao {
-    padding: 12px 24px;
-    font-size: 0.95rem;
-  }
 }
-
 @media (max-width: 480px) {
-  .servicos {
-    padding: 15px 15px;
+  .header-bg {
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    min-height: 250px;
   }
-  .servicos h2 {
-    font-size: 1.8rem;
-  }
-  .servicos ul {
-    font-size: 0.9rem;
-  }
-  .servicos a.botao {
-    padding: 10px 18px;
-    font-size: 0.9rem;
-  }
-}
 
-/* === Section Anba Mapu === */
-.anba-mapu {
-  max-width: 1100px;
-  margin: 50px auto 70px;
-  padding: 25px 20px;
-  background-color: #e8f5f4;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0, 121, 107, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #24425C;
-  text-align: center;
-}
-
-.anba-mapu h2 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #00796b;
-}
-
-.anba-mapu p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-/* Responsive Anba Mapu */
-@media (max-width: 768px) {
-  .anba-mapu {
-    padding: 20px 15px;
-  }
-  .anba-mapu h2 {
-    font-size: 2rem;
-  }
-  .anba-mapu p {
-    font-size: 0.95rem;
+  .slogan {
+    font-size: 1.1rem;
+    padding: 24px 18px;
+    margin-bottom: 12px;
+    max-width: 95%;
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
-
-/* === Section Professores === */
-.professores {
-  max-width: 1100px;
-  margin: 60px auto 70px;
-  padding: 30px 20px;
-  background-color: #fff;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(36, 66, 92, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #24425C;
-  text-align: center;
+.slogan {
+  word-wrap: break-word;
+  white-space: normal;
 }
-
-.professores h2 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.professor {
-  display: inline-block;
-  max-width: 250px;
-  margin: 15px 20px;
-  vertical-align: top;
-}
-
-.professor img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 121, 107, 0.2);
-  margin-bottom: 15px;
-}
-
-.professor h3 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.professor p {
-  font-size: 1rem;
-  font-style: italic;
-  color: #00695c;
-}
-
-/* Responsive Professeurs */
-@media (max-width: 768px) {
-  .professor {
-    max-width: 180px;
-    margin: 15px 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .professor {
-    max-width: 140px;
-    margin: 10px 8px;
-  }
-  .professor h3 {
-    font-size: 1rem;
-  }
-  .professor p {
-    font-size: 0.9rem;
-  }
-}
-
-/* === Section Depoimentos === */
-.depoimentos {
-  max-width: 1100px;
-  margin: 50px auto 70px;
-  padding: 25px 20px;
-  background-color: #e8f5f4;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0, 121, 107, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #24425C;
-  text-align: center;
-}
-
-.depoimentos h2 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.depoimentos blockquote {
-  font-style: italic;
-  font-size: 1.1rem;
-  margin: 20px auto;
-  max-width: 850px;
-  line-height: 1.6;
-  color: #00695c;
-  position: relative;
-  padding-left: 40px;
-}
-
-.depoimentos blockquote::before {
-  content: "“";
-  font-size: 3rem;
-  color: #00796b;
-  position: absolute;
-  left: 10px;
-  top: -10px;
-  font-family: serif;
-}
-
-/* Responsive Depoimentos */
-@media (max-width: 768px) {
-  .depoimentos blockquote {
-    font-size: 1rem;
-    padding-left: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .depoimentos blockquote {
-    font-size: 0.95rem;
-    padding-left: 25px;
-  }
-}
-
-/* === Section Chamada Final === */
-.chamada-final {
-  background-color: #24425C;
-  color: #f0f6f5;
-  text-align: center;
-  padding: 50px 20px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.chamada-final h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 25px;
-}
-
-.chamada-final p {
-  font-size: 1.2rem;
-  margin-bottom: 35px;
-  font-weight: 600;
-}
-
-.chamada-final a.botao {
-  background-color: #f9a825;
-  color: #24425C;
-  font-weight: 700;
-  padding: 16px 40px;
-  font-size: 1.1rem;
-  border-radius: 40px;
-  box-shadow: 0 6px 18px rgba(249, 168, 37, 0.5);
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.chamada-final a.botao:hover {
-  background-color: #f57f17;
-  box-shadow: 0 8px 22px rgba(245, 127, 23, 0.7);
-}
-
-/* Responsive Chamada Final */
-@media (max-width: 768px) {
-  .chamada-final h2 {
-    font-size: 2rem;
-  }
-  .chamada-final p {
-    font-size: 1rem;
-  }
-  .chamada-final a.botao {
-    padding: 14px 32px;
-    font-size: 1rem;
-  }
-  .chamada-final {
-    color: #24425C;
-  }
-}
-
-@media (max-width: 480px) {
-  .chamada-final h2 {
-    font-size: 1.7rem;
-  }
-    .chamada-final p {
-      font-size: 0.95rem;
-    }
-  }
