@@ -22,7 +22,7 @@ body {
 
 /* === NAVBAR === */
 .navbar {
-  position: fixed; /* fixée en haut */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -34,11 +34,11 @@ body {
   overflow-x: hidden;
 }
 
-/* === CONTENEUR CENTRALISÉ === */
+/* === CONTAINER === */
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1px 0; /* Supprimé le padding horizontal pour coller le logo */
+  padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,6 +47,10 @@ body {
 
 /* === LOGO === */
 .navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
   margin: 0;
   padding: 0;
 }
@@ -57,17 +61,17 @@ body {
   object-fit: contain;
   border-radius: 10px;
   transition: transform 0.3s ease;
-  margin-left: 10px; /* Légère marge pour éviter de coller au bord */
+  margin-left: 10px;
 }
 
 .navbar-logo img:hover {
   transform: scale(1.06);
 }
 
-/* === LIENS === */
+/* === LINKS === */
 .navbar-links {
   display: flex;
-  gap: 28px;
+  gap: 20px;
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
@@ -79,7 +83,7 @@ body {
 .navbar-links a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #ffffff;
   position: relative;
   padding: 4px 0;
@@ -121,7 +125,7 @@ body {
   line-height: 1.4;
 }
 
-/* === ANIMATION (facultatif) === */
+/* === ANIMATION === */
 .fade-in-hidden {
   opacity: 0;
   transform: translateY(-30px);
@@ -134,110 +138,30 @@ body {
 }
 
 /* === RESPONSIVE === */
-
-  .navbar-links {
-    justify-content: center;
-    gap: 16px;
-    padding: 8px 0;
-  }
-
-  .navbar-links a {
-    font-size: 0.9rem;
-  }
-
-  .navbar-slogan {
-    font-size: 1.3rem;
-    padding: 16px 20px;
-    text-align: center;
-  }
-
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 8px 12px;
-    flex-direction: row; /* ← garde la disposition horizontale */
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .navbar-links {
-    justify-content: flex-end;
-    flex: 1;
-    gap: 12px;
-    padding: 8px 0;
-    overflow-x: auto;
-  }
-
-  .navbar-links a {
-    font-size: 0.9rem;
-  }
-
-  .navbar-slogan {
-    font-size: 1.3rem;
-    padding: 16px 20px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-container {
-    padding: 8px 12px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 8px 12px;
   }
 
-  .navbar-logo img {
-    height: 38px; /* Taille réduite du logo sur mobile */
-  }
-
-  .navbar-links {
-    justify-content: flex-end;
-    flex: 1;
-    gap: 12px;
-    padding: 8px 0;
-    overflow-x: auto;
-  }
-
-  .navbar-links a {
-    font-size: 0.9rem;
-  }
-
-  .navbar-slogan {
-    font-size: 1.3rem;
-    padding: 16px 20px;
-    text-align: center;
-  }
-}
-
-/* Assure que le logo reste bien à gauche */
-.navbar-logo {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 0 0 auto;
-}
-
-/* Image du logo */
-.navbar-logo img {
-  height: 52px;
-  max-height: 60px;
-  object-fit: contain;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  margin-left: 10px;
-}
-
-@media (max-width: 768px) {
   .navbar-logo img {
     height: 38px; /* Plus petit sur mobile */
   }
-}
 
-.navbar-links a {
-  font-size: 0.85rem; /* ou 14px par exemple */
-}
+  .navbar-links {
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 8px 0;
+    overflow-x: auto;
+  }
 
+  .navbar-links a {
+    font-size: 0.72rem; /* plus petit encore sur mobile */
+  }
+
+  .navbar-slogan {
+    font-size: 1.2rem;
+    padding: 12px 16px;
+  }
+}
