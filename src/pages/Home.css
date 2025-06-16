@@ -26,6 +26,20 @@
   transform: scale(1.05);
   filter: brightness(1.1);
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-container:hover .banner-image {
+    padding: 20px 25px;
+  }
+
+  .sbanner-container:hover .banner-image {
+    font-size: 2rem;
+  }
+
+  .banner-container:hover .banner-image {
+    font-size: 0.95rem;
+  }
+}
 
 /* === Banner Principal === */
 .banner-container {
@@ -73,16 +87,6 @@
   background-color: #25d366;
 }
 
-/* Bouton Orçamento en bas à gauche */
-.banner-buttons .btn-orcamento {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  pointer-events: all;
-  background-color: #00796b;
-  font-size: 0.9rem;
-  padding: 8px 16px;
-}
 
 /* Style général des boutons */
 .btn {

@@ -113,24 +113,6 @@
   color: #b0d9c1;
 }
 
-/* Animation fade-in */
-.fade-in-hidden {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .cartillage-images {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @media (max-width: 576px) {
   .cartillage-images {

@@ -1,15 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './AnbaMapu.css';
-import cartillage1 from '../assets/images/cartillage1.jpg';
-import cartillage2 from '../assets/images/cartillage2.jpg';
-import cartillage3 from '../assets/images/cartillage3.jpg';
-import cartillage4 from '../assets/images/cartillage4.jpg';
-import cartillage5 from '../assets/images/cartillage5.jpg';
-import cartillage6 from '../assets/images/cartillage6.jpg';
-import cartillage7 from '../assets/images/cartillage7.jpg';
-import cartillage8 from '../assets/images/cartillage8.jpg';
-import cartillage9 from '../assets/images/cartillage9.jpg';
-
 const AnbaMapu = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -46,23 +36,13 @@ const AnbaMapu = () => {
     };
   }, [modalImg]);
 
+  // Add your images array here or import it from elsewhere
   const images = [
-    cartillage1,
-    cartillage2,
-    cartillage3,
-    cartillage4,
-    cartillage5,
-    cartillage6,
-    cartillage7,
-    cartillage8,
-    cartillage9,
+    // Example: '/path/to/image1.jpg', '/path/to/image2.jpg'
   ];
 
   return (
-    <section
-      ref={ref}
-      className={`anba-mapu ${visible ? 'fade-in-visible' : 'fade-in-hidden'}`}
-    >
+    <section ref={ref} className={visible ? 'visible' : ''}>
       <h2>Clube de Conversas - ANBA MAPU</h2>
       <p>
         Nesse link você encontra a Cartilha do clube de conversa em Crioulo, Francês e/ou Português Língua de Acolhimento.
