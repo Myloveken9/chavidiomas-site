@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Servicos.css';
 
 const Servicos = () => {
@@ -113,9 +112,16 @@ const Servicos = () => {
       </p>
 
       <br></br>
-      <Link to="/contato" className="">
+
+      <div>
+      <a
+            href="https://wa.me/+5511994951277"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-whatsapp"
+        >
         Solicitar orçamento 
-</Link>
+      </a>
     </div>
 
     {/* Legendagem */}
@@ -160,9 +166,16 @@ const Servicos = () => {
       <br></br>
 <h1>🔗 Solicite um orçamento e leve sua mensagem além das fronteiras.</h1>
       
-                        <Link to="/contato" className="">
-                    Solicitar orçamento 
-            </Link>
+                        <a
+            href="https://wa.me/+5511994951277"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-whatsapp"
+        >
+            Solicitar orçamento 
+        </a>
+    </div>
+    {/* Close the previous div opened for Tradução */}
     </div>
       </section>
     );

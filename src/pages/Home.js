@@ -1,6 +1,5 @@
 // src/pages/Home.js
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Home.css';
 import AnbaMapu from './AnbaMapu';
 import Professores from './Professores';
@@ -122,9 +121,15 @@ const Home = () => {
             </ul>
             <p><i>No trabalho, respeitamos a identidade de cada palavra, aplicamos conformidade na formatação. Porque para nós, TRADUZIR é respeitar a identidade de cada palavra fonte, o contexto de seu uso e suas raízes na cultura de origem.</i></p>
             <h3>👇 Solicite um orçamento personalizado</h3>
-            <Link to="/contato" className="botao">
-              Solicitar orçamento
-            </Link>
+            <a
+        href="https://wa.me/+5511994951277"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-pedir-orcamento"
+      >
+        Solicitar orçamento
+      </a>
+    
           </div>
 
           <div className="servico">
@@ -153,9 +158,15 @@ const Home = () => {
             <p><i>Seja um filme, documentário, vídeo institucional, campanha publicitária ou qualquer outro formato digital, conte com a Chavidiomas para tornar seu conteúdo acessível, atrativo e profissional para públicos que falam Francês ou Crioulo Haitiano.</i></p>
             <h1>🔗 Solicite um orçamento e leve sua mensagem além das fronteiras.</h1>
             <br />
-            <Link to="/contato" className="botao">
-              Solicitar orçamento
-            </Link>
+            <a
+        href="https://wa.me/+5511994951277"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-pedir-orcamento"
+      >
+        Solicitar orçamento
+      </a>
+            
           </div>
         </div>
       </section>

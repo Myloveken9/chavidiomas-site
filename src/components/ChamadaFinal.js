@@ -30,7 +30,7 @@ const ChamadaFinal = () => {
       <h2>Chavidiomas</h2>
       <p>Transformado barreiras linguísticas em chaves e oportunidades desde 2017.</p>
       <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLScwZmESruG6BvoCbkM70i59lZnrL31XN9CzJQgcjyYnsnPDZA/viewform?usp=dialog"
+        href="https://wa.me/+5511994951277"
         target="_blank"
         rel="noopener noreferrer"
         className="btn-pedir-orcamento"
