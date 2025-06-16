@@ -1,7 +1,6 @@
 // src/pages/Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Slider from 'react-slick';  // pour le carousel
 import './Home.css';
 import AnbaMapu from './AnbaMapu';
 import Professores from './Professores';
@@ -10,15 +9,6 @@ import ChamadaFinal from '../components/ChamadaFinal';
 
 const Home = () => {
   // config basique du carousel
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-  };
 
   return (
     <>
@@ -37,9 +27,6 @@ const Home = () => {
           >
             Fale no WhatsApp
           </a>
-          <Link to="/contato" className="btn btn-orcamento">
-            Solicitar orçamento
-          </Link>
         </div>
       </section>
 
@@ -171,21 +158,6 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* CAROUSEL après services */}
-      <section className="carrousel-section" style={{ maxWidth: '800px', margin: '30px auto' }}>
-        <Slider {...settings}>
-          <div>
-            <img src="/carousel1.jpg" alt="Imagem 1" style={{ width: '100%', borderRadius: '10px' }} />
-          </div>
-          <div>
-            <img src="/carousel2.jpg" alt="Imagem 2" style={{ width: '100%', borderRadius: '10px' }} />
-          </div>
-          <div>
-            <img src="/carousel3.jpg" alt="Imagem 3" style={{ width: '100%', borderRadius: '10px' }} />
-          </div>
-        </Slider>
       </section>
 
       <AnbaMapu />

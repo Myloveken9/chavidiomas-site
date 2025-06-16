@@ -1,18 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './AnbaMapu.css';
-import cartillage1 from '../assets/images/cartillage1.jpg';
-import cartillage2 from '../assets/images/cartillage2.jpg';
-import cartillage3 from '../assets/images/cartillage3.jpg';
-import cartillage4 from '../assets/images/cartillage4.jpg';
-import cartillage5 from '../assets/images/cartillage5.jpg';
-import cartillage6 from '../assets/images/cartillage6.jpg';
-import cartillage7 from '../assets/images/cartillage7.jpg';
-import cartillage8 from '../assets/images/cartillage8.jpg';
-import cartillage9 from '../assets/images/cartillage9.jpg';
 
 const AnbaMapu = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+
+  // Define your images array here
+  const images = [
+    // Add image URLs or import statements here
+    // Example:
+    // require('../assets/cartillage1.png'),
+    // require('../assets/cartillage2.png'),
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,18 +27,6 @@ const AnbaMapu = () => {
     return () => observer.disconnect();
   }, []);
 
-  const images = [
-    cartillage1,
-    cartillage2,
-    cartillage3,
-    cartillage4,
-    cartillage5,
-    cartillage6,
-    cartillage7,
-    cartillage8,
-    cartillage9,
-  ];
-
   return (
     <section
       ref={ref}
@@ -47,7 +34,7 @@ const AnbaMapu = () => {
     >
       <h2>Clube de Conversas - ANBA MAPU</h2>
       <p>
-        Você encontra a Cartilha do clube de conversa em Crioulo, Francês e/ou Português Língua de Acolhimento.
+        Clicar no link para encontrar a Cartilha do clube de conversa em Crioulo, Francês e/ou Português Língua de Acolhimento.
       </p>
 
       <div className="cartillage-images">
