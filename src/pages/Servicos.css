@@ -22,7 +22,6 @@
 .servico {
   background: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
   padding: 25px 30px;
   margin-bottom: 40px;
   transition: box-shadow 0.3s ease;
@@ -76,6 +75,7 @@
 }
 
 .servico a.botao {
+  position:center;
   display: inline-block;
   padding: 12px 28px;
   font-size: 1.1rem;
@@ -90,22 +90,24 @@
 }
 
 .botao.frances {
+  position:center;
   background-color: #00897b;
 }
 
 .botao.frances:hover {
+  position:center;
   background-color: #00695c;
-  box-shadow: 0 6px 15px rgb(0 105 92 / 0.5);
 }
 
 .botao.crioulo {
+  position: center;
   background-color: #f9a825; /* Jaune doré */
   color: #fff;
 }
 
 .botao.crioulo:hover {
+  position:center;
   background-color: #f57f17;
-  box-shadow: 0 6px 15px rgb(245 127 23 / 0.5);
 }
 
 /* Styles pour liens simples "Solicitar orçamento" */

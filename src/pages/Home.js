@@ -1,13 +1,36 @@
 // src/pages/Home.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
-import AnbaMapu from './AnbaMapu';
 import Professores from './Professores';
 import Depoimentos from './Depoimentos';
 import ChamadaFinal from '../components/ChamadaFinal';
 
 const Home = () => {
-  // config basique du carousel
+  useEffect(() => {
+  const btn = document.getElementById('scrollTopBtn');
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  btn.addEventListener("click", handleClick);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    btn.removeEventListener("click", handleClick);
+  };
+}, []);
+
+
 
   return (
     <>
@@ -125,14 +148,11 @@ const Home = () => {
         href="https://wa.me/+5511994951277"
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-pedir-orcamento"
-      >
+        className="btn-pedir-orcamento">
         Solicitar orçamento
       </a>
-    
-          </div>
-
-          <div className="servico">
+      </div>
+      <div className="servico">
             <h2>Legendagem profissional com precisão linguística e impacto cultural</h2>
             <p>
               Na Chavidiomas, oferecemos serviços especializados de legendagem profissional, com foco nos pares de idiomas Português–Francês e Português–Crioulo Haitiano.
@@ -157,7 +177,6 @@ const Home = () => {
             <p><i>Venha tornar seu projeto, seja filme, documentário, vídeo institucional ou outro conteúdo digital, acessível a um público-alvo do além!</i></p>
             <p><i>Seja um filme, documentário, vídeo institucional, campanha publicitária ou qualquer outro formato digital, conte com a Chavidiomas para tornar seu conteúdo acessível, atrativo e profissional para públicos que falam Francês ou Crioulo Haitiano.</i></p>
             <h1>🔗 Solicite um orçamento e leve sua mensagem além das fronteiras.</h1>
-            <br />
             <a
         href="https://wa.me/+5511994951277"
         target="_blank"
@@ -166,12 +185,40 @@ const Home = () => {
       >
         Solicitar orçamento
       </a>
-            
-          </div>
         </div>
-      </section>
-
-      <AnbaMapu />
+        <div className="servicos"></div>
+      <h2>Clube de Conversas - ANBA MAPU</h2>
+    <p>
+      Nesse link você encontra a Cartilha do clube de conversa em Crioulo, Francês e/ou Português Língua de Acolhimento.
+    </p>
+<div>
+  <div className="anba-mapu">
+    <div className="btn-container">
+      <a href="https://docs.google.com/presentation/d/1MdHyocwvWFyKGZUI7N1U922fqJacKLsDLTpfjD3JAAc/edit?usp=sharing" className="btn ver-cartilha">Ver a Cartilha</a>
+    </div>
+  </div>
+  <div className="Servicos">
+    <div className="container">
+      <h2>Quem Somos</h2>
+      <p>
+        A Chavidiomas é especializada no ensino de idiomas para imigrantes e na oferta de serviços
+        de tradução, transcrição e legendagem. Nosso objetivo é aproximar culturas e facilitar a
+        integração através da linguagem.
+      </p>
+      <p>
+        Com professores experientes e uma abordagem pedagógica adaptada às necessidades dos alunos,
+        promovemos um aprendizado eficiente e humanizado.
+      </p>
+      <p>
+        Além disso, oferecemos serviços de tradução e legendagem para empresas e indivíduos que
+        desejam expandir sua comunicação para o público falante de francês e crioulo haitiano.
+      </p>
+    </div>
+  </div>
+</div>
+      </div> {/* <-- Add this line to close servicos-grid */}
+</section>
+<button id="scrollTopBtn" title="Voltar ao topo">↑</button>
 
       <Professores />
 

@@ -29,7 +29,6 @@ body {
   width: 100%;
   z-index: 9999;
   background-color: #24445C;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid #e6e6e6;
   overflow-x: hidden;
 }
